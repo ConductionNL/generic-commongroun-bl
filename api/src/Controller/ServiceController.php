@@ -60,6 +60,15 @@ class ServiceController extends AbstractController
             // The service is a known component so lets handle the call
             $result = $commonGroundService->callService($component, $url, $content, $query, $header, false, $request->getMethod());
 
+            if (is_array($result)) {
+                $result['error'] = json_decode($result['error'], true);
+                return new Response(
+                    json_encode($result),
+                    Response::HTTP_OK,
+                    ['content-type' => 'application/json']
+                );
+            }
+
             // Lets maps the service responce to a symfony responce
             $response = New Response();
             $response->setContent($result->getBody()->getContents());
