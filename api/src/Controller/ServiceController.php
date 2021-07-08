@@ -82,6 +82,9 @@ class ServiceController extends AbstractController
 
     public function cleanHeaders($headers)
     {
+        $headers['Accept'] = $headers['accept'][0];
+
+        unset($headers['accept']);
         unset($headers['content-type']);
         unset($headers['Authorization']);
         unset($headers['authorization']);
@@ -95,7 +98,6 @@ class ServiceController extends AbstractController
         unset($headers['postman-token']);
         unset($headers['user-agent']);
         unset($headers['x-php-ob-level']);
-        unset($headers['accept']);
         return $headers;
     }
 
