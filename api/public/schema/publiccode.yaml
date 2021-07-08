@@ -1,9 +1,9 @@
 publiccodeYmlVersion: "0.2"
 
-name: proto-component-commonground
+name: generic-commonground-bl
 applicationSuite: commonground
-url: "https://github.com/ConductionNL/proto-component-commonground"
-landingURL: "pc.zaakonline.nl"
+url: "https://github.com/ConductionNL/generic-commonground-bl"
+landingURL: "gcbl.zaakonline.nl"
 isBasedOn: "https://github.com/ConductionNL/Proto-component-commonground.git"
 softwareVersion: "V1.0"
 releaseDate: "2021-08-07"
@@ -40,7 +40,7 @@ usedBy:
     - Gemeente Hoorn
 
 
-roadmap: "https://github.com/ConductionNL/proto-component-commonground/blob/master/ROADMAP.md"
+roadmap: "https://github.com/ConductionNL/generic-commonground-bl/blob/master/ROADMAP.md"
 
 developmentStatus: development
 
@@ -69,8 +69,8 @@ description:
         #          on multiple rows. You should note what the software
         #          is and why one should need it.
 
-        documentation: "https://github.com/ConductionNL/proto-component-commonground/blob/master/README.md"
-        apiDocumentation: "pc.zaakonline.nl"
+        documentation: "https://github.com/ConductionNL/generic-commonground-bl/blob/master/README.md"
+        apiDocumentation: "gcbl.zaakonline.nl"
 #
 #    features:
 #       - Very important feature
@@ -119,5 +119,5 @@ dependsOn:
 
 installations:
     - type: helm
-      url: "https://raw.githubusercontent.com/ConductionNL/proto-component-commonground/master/api/helm/"
+      url: "https://raw.githubusercontent.com/ConductionNL/generic-commonground-bl/master/api/helm/"
 

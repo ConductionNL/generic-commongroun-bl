@@ -10,6 +10,8 @@ config:
 
 security:
   applicationKey: "45c1a4b6-59d3-4a6e-86bf-88a872f35845"
+  publicKey: "%example%"
+  privateKey: "%example%"
   secret: ""
   jwt:
     id:
@@ -17,7 +19,7 @@ security:
 
 php:
   repository: docker.io/conduction/protocomponent-php
-  image: ghcr.io/conductionnl/proto-component-commonground-php
+  image: ghcr.io/conductionnl/generic-commonground-bl-php
   tag: latest
   env: prod
   replicaCount: 2
@@ -39,7 +41,7 @@ redis:
 
 nginx:
   repository: docker.io/conduction/protocomponent-nginx
-  image: ghcr.io/conductionnl/proto-component-commonground-nginx
+  image: ghcr.io/conductionnl/generic-commonground-bl-nginx
   tag: latest
   pullPolicy: Always
   replicaCount: 2
@@ -60,6 +62,7 @@ postgresql:
 
 ingress:
   enabled: false
+  type: "nginx"
   hostname: .local
   path: /
   annotations:
