@@ -35,10 +35,10 @@ class ServiceController extends AbstractController
     /**
      * This function routes a call from the UI to a specific commonground component
      *
-     * @Route("/{service}/{endpoint}/{id}", methods={"GET","POST","PUT","UPDATE","DELETE"})
+     * @Route("/{service}/{endpoint}", methods={"GET","POST","PUT","UPDATE","DELETE"}, requirements={"endpoint"=".+"})
      * @Template
      */
-    public function route(Request $request, CommonGroundService $commonGroundService, $service, $endpoint = '', $id = null)
+    public function route(Request $request, CommonGroundService $commonGroundService, $service, $endpoint = '')
     {
         /* @todo User validation */
 
@@ -55,11 +55,7 @@ class ServiceController extends AbstractController
 
         if($component){
 
-            if ($id) {
-                $url = $commonGroundService->getUrlFromEndpoint(['component' => $service, 'type' => $endpoint, 'id' => $id], true);
-            } else {
-                $url = $commonGroundService->getUrlFromEndpoint(['component' => $service, 'type' => $endpoint], true);
-            }
+            $url = $commonGroundService->getUrlFromEndpoint(['component' => $service, 'type' => $endpoint], true);
 
             // The service is a known component so lets handle the call
             $result = $commonGroundService->callService($component, $url, $content, $query, $header, false, $request->getMethod());
