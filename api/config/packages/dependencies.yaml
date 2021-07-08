@@ -1,0 +1,6 @@
+parameters:
+    components:
+        wrc:
+            auth: apikey
+            location: https://conduction.demodam.nl/api/v1/wrc
+            apikey: 45c1a4b6-59d3-4a6e-86bf-88a872f35845
