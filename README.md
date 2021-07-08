@@ -1,4 +1,4 @@
-# pc
+# Generic Commp
 
 Description
 ----

@@ -1,6 +1,6 @@
 <?php
 
-// src/Controller/DefaultController.php
+// src/Controller/USerController.php
 
 namespace App\Controller;
 
