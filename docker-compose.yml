@@ -69,6 +69,8 @@ services:
       - NOTIFICATION_ENABLED=${NOTIFICATION_ENABLED}
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - PRIVATE_KEY=${PRIVATE_KEY}
+      - PUBLIC_KEY=${PUBLIC_KEY}
     ports:
       - "82:80"
 
