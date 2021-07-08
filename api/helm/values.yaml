@@ -10,6 +10,8 @@ config:
 
 security:
   applicationKey: "45c1a4b6-59d3-4a6e-86bf-88a872f35845"
+  publicKey: "%example%"
+  privateKey: "%example%"
   secret: ""
   jwt:
     id:

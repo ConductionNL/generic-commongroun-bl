@@ -100,7 +100,20 @@ spec:
                   key: redis-port
             {{- end }}
             - name: APP_URL
-              value: https://{{ $.Values.ingress.domain }}/{{ $.Values.ingress.path }}
+              valueFrom:
+                configMapKeyRef:
+                  key: url
+                  name: {{ template "fullname" . }}
+            - name: PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: app_public_key
+            - name: PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: app_private_key
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- if .Values.nodeSelector }}
