@@ -5,12 +5,12 @@ info:
   description: |
     API Details
     - Component: 
-    - Reference: genneric-commonground-bl
+    - Reference: generic-commonground-bl
     - Enviroment: dev
     - Version: V1.0
-    - Repository: [online](https://github.com/ConductionNL/genneric-commonground-bl) / [zip](https://github.com/ConductionNL/genneric-commonground-bl/archive/master.zip)
+    - Repository: [online](https://github.com/ConductionNL/generic-commonground-bl) / [zip](https://github.com/ConductionNL/generic-commonground-bl/archive/master.zip)
     - Docker Image: [online]() 
-    - Datamodel: [postman](schema/genneric-commonground-bl.postman_collection.json) / [oas](schema/openapi.yaml) / [pdf](schema/datamodel.pdf) / [modelio (zip)](schema/Datamodel_Modelio.zip) 
+    - Datamodel: [postman](schema/generic-commonground-bl.postman_collection.json) / [oas](schema/openapi.yaml) / [pdf](schema/datamodel.pdf) / [modelio (zip)](schema/Datamodel_Modelio.zip) 
 
     Het Proto Component vormt zowel de gemeenschappelijke basis onder alle componenten, als een “template” voor het maken van nieuwe componenten.         
 paths:
@@ -2438,12 +2438,12 @@ definitions:
         description: 'The moment this request was created'
         type: string
         format: date-time
-        example: '2021-07-08 10:11:00'
+        example: '2021-07-08 11:29:46'
       dateModified:
         description: 'The moment this request last Modified'
         type: string
         format: date-time
-        example: '2021-07-08 10:11:00'
+        example: '2021-07-08 11:29:46'
     required: []
   AuditTrail-write:
     properties:
@@ -2491,12 +2491,12 @@ definitions:
         description: 'The moment this request was created'
         type: string
         format: date-time
-        example: '2021-07-08 10:11:00'
+        example: '2021-07-08 11:29:46'
       dateModified:
         description: 'The moment this request last Modified'
         type: string
         format: date-time
-        example: '2021-07-08 10:11:00'
+        example: '2021-07-08 11:29:46'
     required: []
   ChangeLog-write:
     properties:
@@ -2538,7 +2538,7 @@ host: irc.zaakonline.nl
 servers:
   -
     name: conduction.nl
-    url: genneric-commonground-bl.dev.conduction.nl
+    url: generic-commonground-bl.dev.conduction.nl
 externalDocs:
   -
     description: 'OAS Documentatie'

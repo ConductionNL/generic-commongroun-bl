@@ -19,7 +19,7 @@ security:
 
 php:
   repository: docker.io/conduction/protocomponent-php
-  image: ghcr.io/conductionnl/genneric-commonground-bl-php
+  image: ghcr.io/conductionnl/generic-commonground-bl-php
   tag: latest
   env: prod
   replicaCount: 2
@@ -41,7 +41,7 @@ redis:
 
 nginx:
   repository: docker.io/conduction/protocomponent-nginx
-  image: ghcr.io/conductionnl/genneric-commonground-bl-nginx
+  image: ghcr.io/conductionnl/generic-commonground-bl-nginx
   tag: latest
   pullPolicy: Always
   replicaCount: 2

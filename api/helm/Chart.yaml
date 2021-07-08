@@ -3,7 +3,7 @@ annotations:
 apiVersion: v2
 appVersion: V1.0
 description: 'Het Proto Component vormt zowel de gemeenschappelijke basis onder alle componenten, als een “template” voor het maken van nieuwe componenten.'
-name: genneric-commonground-bl
+name: generic-commonground-bl
 version: 1.0.0
 home: https://www.conduction.nl
 icon: https://conductionnl.github.io/images/conduction_avatar_blue_on_transparant.svg
