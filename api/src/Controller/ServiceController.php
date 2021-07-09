@@ -73,12 +73,8 @@ class ServiceController extends AbstractController
             $response = New Response();
             $response->setContent($result->getBody()->getContents());
             $response->headers->replace($result->getHeaders());
+            $response->headers->add(['Access-Control-Allow-Origin' => '*']);
             $response->setStatusCode($result->getStatusCode());
-            
-            header_remove('Access-Control-Allow-Origin');
-            header('Access-Control-Allow-Origin: *', true);
-            header('Access-Control-Allow-Headers: *', true);
-            header('Access-Control-Allow-Credentials: false', true);
 
         }
         else{

@@ -71,15 +71,12 @@ class UserController extends AbstractController
 
         $jwt = $this->createJWTToken($jwtBody);
 
-        header('Access-Control-Allow-Origin: *', true);
-        header('Access-Control-Allow-Headers: *', true);
-        header('Access-Control-Allow-Credentials: false', true);
-
         return new Response(
             json_encode($jwt),
             Response::HTTP_OK,
             [
                 'content-type' => 'application/json',
+                'Access-Control-Allow-Origin' => '*'
             ]
         );
 
