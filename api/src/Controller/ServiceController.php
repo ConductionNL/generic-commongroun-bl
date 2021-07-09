@@ -76,6 +76,10 @@ class ServiceController extends AbstractController
             $response->headers->add(['Access-Control-Allow-Origin' => '*', 'Access-Control-Allow-Headers' => '*', 'Access-Control-Allow-Credentials' => 'false']);
             $response->setStatusCode($result->getStatusCode());
 
+            header('Access-Control-Allow-Origin: *');
+            header('Access-Control-Allow-Headers: *');
+            header('Access-Control-Allow-Credentials: false');
+
         }
         else{
             throw new HttpException('404', 'Service not found');
