@@ -69,10 +69,11 @@ class ServiceController extends AbstractController
                 );
             }
 
-            // Lets maps the service responce to a symfony responce
+            // Lets maps the service response to a symfony response
             $response = New Response();
             $response->setContent($result->getBody()->getContents());
             $response->headers->replace($result->getHeaders());
+            $response->headers->remove('Access-Control-Allow-Origin');
             $response->headers->add(['Access-Control-Allow-Origin' => '*']);
             $response->setStatusCode($result->getStatusCode());
 
